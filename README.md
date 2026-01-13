@@ -1,6 +1,7 @@
 # Wavefront Set Neural Network - U-Net Training
 
 A deep learning approach to predicting wavefront sets (surface normals/angles) of geometric shapes from binary boundary masks, with special handling for corner singularities.
+This project is inspired by microlocal approaches to wavefront-set extraction and recent work connecting wavefront sets, shearlets, and deep CNNs (e.g., Andrade-Loarca, Applied Microlocal Analysis of Deep Neural Networks for Inverse Problems). We implement a simplified, supervised baseline: a U-Net predicts per-pixel wavefront directions (36 bins) on synthetic data with known ground truth.”
 
 ## Overview
 
