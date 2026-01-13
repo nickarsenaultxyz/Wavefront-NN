@@ -6,7 +6,7 @@ A deep learning approach to predicting wavefront sets (surface normals/angles) o
 
 This project implements a U-Net-based neural network that predicts the **wavefront set** of geometric shapes. The wavefront set represents the directional information (surface normals) at boundary points. A key innovation of this implementation is its ability to handle **singularities at corners**, where a single boundary pixel may possess multiple valid normal directions.
 
-Mathematically, the wavefront set, denoted $WF(u)$ is a subset of the cotangent bundle $T^* \mathbb{R}^n$. It contains points $(x_0,\xi_0)$ such that there exists a conic neighborhood $\Gamma$ of $\xi$ where $\mathcal{F}(u(x,\xi))$ is not rapidly decreasing. That is, there exists $\varphi \in C^\infty_c(\mathbb{R}^n), $\varphi(x_0) \neq 0$ such that
+Mathematically, the wavefront set, denoted $WF(u)$ is a subset of the cotangent bundle $T^* \mathbb{R}^n$. It contains points $(x_0,\xi_0)$ such that there exists a conic neighborhood $\Gamma$ of $\xi$ where $\mathcal{F}(u(x,\xi))$ is not rapidly decreasing. That is, there exists $\varphi \in C^\infty_c(\mathbb{R}^n)$, $\varphi(x_0) \neq 0$ such that
 $$\forall N \in \mathbb{N} \exists C_n > 0 \text{ such that }  |\hat{\varphi u}| \leq C_N (1 + |\xi|)^{-N}$$
 for all $\xi \in \Gamma$.
 ## Key Features
