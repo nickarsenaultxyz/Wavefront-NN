@@ -254,3 +254,6 @@ This project explores the application of deep learning to geometric singularity 
 - Shape analysis and reconstruction
 - Geometric deep learning
 - Medical image segmentation (detecting branching structures)
+
+## Citations
+Andrade Loarca, H. (2022). Applied microlocal analysis of deep neural networks for inverse problems (Dissertation, LMU München, Faculty of Mathematics, Computer Science and Statistics). https://doi.org/10.5282/edoc.30596
