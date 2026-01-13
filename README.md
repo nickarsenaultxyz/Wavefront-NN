@@ -9,7 +9,15 @@ This project implements a U-Net-based neural network that predicts the **wavefro
 Mathematically, the wavefront set, denoted $WF(u)$ is a subset of the cotangent bundle $T^* \mathbb{R}^n$. It contains points $(x_0,\xi_0)$ such that there exists a conic neighborhood $\Gamma$ of $\xi$ where $\mathcal{F}(u(x,\xi))$ is not rapidly decreasing. That is, there exists $\varphi \in C^\infty_c(\mathbb{R}^n)$, $\varphi(x_0) \neq 0$ such that
 $$\forall N \in \mathbb{N},  \exists C_n > 0 \text{ such that }  |\mathcal{F}(\varphi u)| \leq C_N (1 + |\xi|)^{-N}$$
 for all $\xi \in \Gamma$.
-## Key Features
+
+The WFNN is currently trained to calculate the wavefront set for indicator functions on various geometric shapes. The benefit to this that one can calculate explicity what the wavefront set is and use this in the training process. 
+
+## Example: Indicator function on a disk
+
+Let $u=\mathbf{1}_\Omega$ where $\Omega\subset\mathbb{R}^2$ is a disk and $\Sigma=\partial\Omega$. Then the wavefront set is the conormal bundle of the boundary:
+
+Sketch: near any $x_0\in\Sigma$ choose local coordinates $(s,n)$ with $s$ tangent and $n$ normal so that locally $u(s,n)\approx H(n)$ (up to a smooth cutoff). The function is smooth in $s$, so its localized Fourier transform decays rapidly whenever the frequency has a tangential component. Non-rapid decay only occurs when the frequency points in the normal direction, hence only normal covectors appear in $WF(u)$.
+
 
 ### Architecture
 - **Custom U-Net**: Encoder-decoder architecture adapted for pixel-wise classification of angle bins
