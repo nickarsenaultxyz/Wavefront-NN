@@ -148,30 +148,6 @@ with torch.no_grad():
     probs = torch.sigmoid(logits)
 ```
 
-## File Structure
-
-```
-wavefront_unet_colab.ipynb
-├── Section 1: Dependencies and Setup
-├── Section 2: Data Generation Functions
-│   ├── generate_circle_normals()
-│   ├── generate_ellipse_normals()
-│   ├── generate_square_normals()
-│   └── generate_polygon_normals()
-├── Section 3: Dataset Generation
-├── Section 4: U-Net Model Definition
-│   ├── DoubleConv, Down, Up layers
-│   └── WavefrontUNet wrapper
-├── Section 5: Dataset and DataLoader
-├── Section 6: Training Functions
-├── Section 7: Training Loop
-├── Section 8: Training Visualization
-└── Section 9: Testing and Evaluation
-    ├── Polygon generalization test
-    ├── Corner pixel analysis
-    └── Batch evaluation
-```
-
 ## Model Architecture
 
 ```
